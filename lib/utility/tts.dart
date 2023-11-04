@@ -20,9 +20,10 @@ Future<AudioPlayer> texttospeech({
   try {
     await audioPlayer.stop();
     log(text);
+    return audioPlayer
 
     var audiores =
-        await http.post(Uri.parse('https://texttospeech.googleapis.com/v1beta1/text:synthesize?key=AIzaSyCJz71JpM4WkryW0FE7SsEN0ppi2UXCThA'),
+        await http.post(Uri.parse(''),
             headers: {"Content-Type": "application/json"},
             body: jsonEncode({
               "audioConfig": {
